@@ -126,7 +126,9 @@
           ],
           "displayMode": "table",
           "placement": "right",
-          "showLegend": true
+          "showLegend": true,
+          "sortBy": "Last *",
+          "sortDesc": true
         },
         "tooltip": {
           "mode": "single",
@@ -142,7 +144,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "irate(nzbget_news_server_total_bytes{server=~\".*\"}[5m])",
+          "expr": "sum by(server) (irate(nzbget_news_server_total_bytes[5m]))",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "instant": false,
@@ -258,7 +260,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "builder",
-          "expr": "nzbget_thread_count",
+          "expr": "sum(nzbget_thread_count)",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "instant": false,
@@ -287,6 +289,6 @@
   "timezone": "browser",
   "title": "nzbget",
   "uid": "ee0kznijnz0g0c",
-  "version": 2,
+  "version": 5,
   "weekStart": ""
 }
