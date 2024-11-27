@@ -38,7 +38,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 60,
+  "id": 25,
   "links": [],
   "panels": [
     {
@@ -306,11 +306,12 @@
             "uid": "prometheus"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "nzbget_history_par_repair_time_seconds",
           "hide": false,
-          "instant": false,
+          "instant": true,
           "legendFormat": "Par Repair",
-          "range": true,
+          "range": false,
           "refId": "D"
         },
         {
@@ -675,7 +676,7 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 12,
+        "w": 18,
         "x": 0,
         "y": 12
       },
@@ -796,10 +797,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 5,
-        "x": 12,
-        "y": 12
+        "h": 8,
+        "w": 18,
+        "x": 0,
+        "y": 18
       },
       "id": 2,
       "options": {
@@ -899,9 +900,9 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 12,
+        "w": 18,
         "x": 0,
-        "y": 18
+        "y": 26
       },
       "id": 15,
       "options": {
@@ -939,7 +940,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 34
       },
       "id": 14,
       "panels": [],
@@ -1033,10 +1034,10 @@
         ]
       },
       "gridPos": {
-        "h": 6,
-        "w": 6,
+        "h": 7,
+        "w": 18,
         "x": 0,
-        "y": 27
+        "y": 35
       },
       "id": 3,
       "options": {
@@ -1130,10 +1131,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 3,
-        "x": 6,
-        "y": 27
+        "h": 10,
+        "w": 13,
+        "x": 0,
+        "y": 42
       },
       "id": 8,
       "options": {
@@ -1199,10 +1200,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 3,
-        "x": 9,
-        "y": 27
+        "h": 10,
+        "w": 5,
+        "x": 13,
+        "y": 42
       },
       "id": 9,
       "options": {
