@@ -354,73 +354,6 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            }
-          },
-          "mappings": []
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 12,
-        "y": 0
-      },
-      "id": 6,
-      "options": {
-        "displayLabels": [
-          "name",
-          "percent"
-        ],
-        "legend": {
-          "displayMode": "list",
-          "placement": "right",
-          "showLegend": false,
-          "values": []
-        },
-        "pieType": "pie",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "tooltip": {
-          "mode": "single",
-          "sort": "none"
-        }
-      },
-      "pluginVersion": "11.3.1",
-      "targets": [
-        {
-          "editorMode": "code",
-          "exemplar": false,
-          "expr": "sum(nzbget_history_category_count{category != \"\"}) by (category)",
-          "instant": true,
-          "legendFormat": "{{category}}",
-          "range": false,
-          "refId": "A"
-        }
-      ],
-      "title": "Categories",
-      "type": "piechart"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
             "mode": "thresholds"
           },
           "mappings": [],
@@ -473,7 +406,7 @@
           "refId": "A"
         }
       ],
-      "title": "Downloaded",
+      "title": "Current Session Download",
       "type": "stat"
     },
     {
@@ -487,6 +420,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
+          "max": 15728640,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -676,7 +610,7 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 18,
+        "w": 12,
         "x": 0,
         "y": 12
       },
@@ -708,7 +642,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "sum by(server) (irate(nzbget_news_server_total_bytes[5m]))",
+          "expr": "sum by(server) (irate(nzbget_news_server_total_bytes[$__rate_interval]))",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "instant": false,
@@ -724,7 +658,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "sum(irate(nzbget_news_server_total_bytes[5m]))\n",
+          "expr": "sum(irate(nzbget_news_server_total_bytes[$__rate_interval]))\n",
           "hide": false,
           "instant": false,
           "legendFormat": "Total Throughput",
@@ -797,8 +731,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
-        "w": 18,
+        "h": 4,
+        "w": 12,
         "x": 0,
         "y": 18
       },
@@ -900,9 +834,9 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 18,
+        "w": 12,
         "x": 0,
-        "y": 26
+        "y": 22
       },
       "id": 15,
       "options": {
@@ -940,7 +874,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 34
+        "y": 30
       },
       "id": 14,
       "panels": [],
@@ -1034,10 +968,10 @@
         ]
       },
       "gridPos": {
-        "h": 7,
-        "w": 18,
+        "h": 6,
+        "w": 6,
         "x": 0,
-        "y": 35
+        "y": 31
       },
       "id": 3,
       "options": {
@@ -1131,10 +1065,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 10,
-        "w": 13,
-        "x": 0,
-        "y": 42
+        "h": 6,
+        "w": 3,
+        "x": 6,
+        "y": 31
       },
       "id": 8,
       "options": {
@@ -1200,10 +1134,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 10,
-        "w": 5,
-        "x": 13,
-        "y": 42
+        "h": 6,
+        "w": 3,
+        "x": 9,
+        "y": 31
       },
       "id": 9,
       "options": {
@@ -1291,6 +1225,6 @@
   "timezone": "browser",
   "title": "nzbget",
   "uid": "ee0kznijnz0g0c",
-  "version": 7,
+  "version": 8,
   "weekStart": ""
 }
