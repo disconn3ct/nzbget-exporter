@@ -38,7 +38,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 25,
+  "id": 58,
   "links": [],
   "panels": [
     {
@@ -246,7 +246,7 @@
       },
       "gridPos": {
         "h": 11,
-        "w": 6,
+        "w": 12,
         "x": 6,
         "y": 0
       },
@@ -609,8 +609,8 @@
         ]
       },
       "gridPos": {
-        "h": 6,
-        "w": 12,
+        "h": 7,
+        "w": 18,
         "x": 0,
         "y": 12
       },
@@ -731,10 +731,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
-        "w": 12,
+        "h": 5,
+        "w": 18,
         "x": 0,
-        "y": 18
+        "y": 19
       },
       "id": 2,
       "options": {
@@ -834,9 +834,9 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 12,
+        "w": 18,
         "x": 0,
-        "y": 22
+        "y": 24
       },
       "id": 15,
       "options": {
@@ -874,7 +874,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 30
+        "y": 32
       },
       "id": 14,
       "panels": [],
@@ -968,10 +968,10 @@
         ]
       },
       "gridPos": {
-        "h": 6,
-        "w": 6,
+        "h": 8,
+        "w": 10,
         "x": 0,
-        "y": 31
+        "y": 33
       },
       "id": 3,
       "options": {
@@ -1065,10 +1065,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 3,
-        "x": 6,
-        "y": 31
+        "h": 8,
+        "w": 4,
+        "x": 10,
+        "y": 33
       },
       "id": 8,
       "options": {
@@ -1134,10 +1134,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 3,
-        "x": 9,
-        "y": 31
+        "h": 8,
+        "w": 4,
+        "x": 14,
+        "y": 33
       },
       "id": 9,
       "options": {
@@ -1225,6 +1225,6 @@
   "timezone": "browser",
   "title": "nzbget",
   "uid": "ee0kznijnz0g0c",
-  "version": 8,
+  "version": 9,
   "weekStart": ""
 }
