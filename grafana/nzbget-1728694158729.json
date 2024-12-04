@@ -18,7 +18,7 @@
           "type": "prometheus",
           "uid": "prometheus"
         },
-        "enable": true,
+        "enable": false,
         "expr": "nzbget_standby",
         "filter": {
           "exclude": false,
@@ -38,7 +38,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 59,
+  "id": 25,
   "links": [],
   "panels": [
     {
@@ -742,6 +742,7 @@
           "color": {
             "mode": "thresholds"
           },
+          "fieldMinMax": false,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -764,9 +765,11 @@
       },
       "id": 16,
       "options": {
-        "minVizHeight": 75,
-        "minVizWidth": 75,
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -774,9 +777,9 @@
           "fields": "",
           "values": false
         },
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true,
-        "sizing": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
       "pluginVersion": "11.3.1",
       "targets": [
@@ -789,7 +792,7 @@
         }
       ],
       "title": "Downloaded per Server",
-      "type": "gauge"
+      "type": "stat"
     },
     {
       "datasource": {
@@ -889,6 +892,19 @@
       ],
       "title": "Download Per Server",
       "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 27
+      },
+      "id": 14,
+      "panels": [],
+      "title": "Caches",
+      "type": "row"
     },
     {
       "datasource": {
@@ -991,19 +1007,6 @@
       ],
       "title": "nzbget Active Connections",
       "type": "timeseries"
-    },
-    {
-      "collapsed": false,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 27
-      },
-      "id": 14,
-      "panels": [],
-      "title": "Caches",
-      "type": "row"
     },
     {
       "datasource": {
@@ -1349,6 +1352,6 @@
   "timezone": "browser",
   "title": "nzbget",
   "uid": "ee0kznijnz0g0c",
-  "version": 10,
+  "version": 11,
   "weekStart": ""
 }
